@@ -10,5 +10,5 @@
 
 0. git clone https://github.com/ksevelyar/rust-boilerplate.git your-project
 1. cd your-project && rm -rf .git
-1. nix develop 
+1. direnv allow 
 2. cargo init
