@@ -15,21 +15,20 @@
         };
       in
       {
-        devShell = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
-            (
-              rust-bin.stable.latest.default.override {
-                targets = [
-                  "thumbv7m-none-eabi" # ARM Cortex-M3
-                ];
-              }
-            )
-            pkg-config
-            gcc-arm-embedded
-            gnumake
-            openocd
-          ];
-        };
+        devShell = pkgs.mkShell
+          {
+            nativeBuildInputs = with pkgs; [
+              (
+                rust-bin.stable.latest.default.override {
+                  targets = [
+                    "thumbv7m-none-eabi" # ARM Cortex-M3
+                  ];
+                }
+              )
+              gcc-arm-embedded
+              cargo-flash
+            ];
+          };
       }
     );
 }
