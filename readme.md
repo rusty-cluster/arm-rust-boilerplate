@@ -1,14 +1,13 @@
-# Rust boilerplate
+# Rust boilerplate for STM32
 
-# Features
+# Hardware
 
-* Nix with flakes
-* Watch flake.lock with direnv
-* Binary cache https://github.com/oxalica/rust-overlay
+* [Blue Pill (stm32f103c8t6)](https://www.aliexpress.com/wholesale?SearchText=stm32f103c8t6)
+* [ST-LINK V2](https://www.aliexpress.com/wholesale?SearchText=stlink+v2)
 
 # Init your Cargo project
 
 0. git clone https://github.com/ksevelyar/rust-boilerplate.git your-project
 1. cd your-project && rm -rf .git
-1. direnv allow
-2. cargo init
+2. direnv allow
+3. cargo init
