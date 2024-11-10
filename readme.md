@@ -9,13 +9,13 @@
 
 `direnv allow`
 
-## Debug
-
-`cargo flash --list-probes`
+## Udev rules
 
 ```
-The following debug probes were found:
-[0]: STLink V2 (VID: 0483, PID: 3748, Serial: 091D16002C135437334D4E00, StLink)
+services.udev.extraRules = ''
+  # STMicroelectronics ST-LINK/V2
+  ATTR{idVendor}=="0483", ATTR{idProduct}=="3748", MODE="660", GROUP="dialout"
+'';
 ```
 
 ## Build
